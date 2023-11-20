@@ -17,52 +17,52 @@ interface CommitType {
 const commitTypes: Record<string, CommitType> = {
   feat: {
     emoji: "📦",
-    name: "FEAT",
+    name: "feat",
     description: "new feature",
   },
   style: {
     emoji: "💅",
-    name: "STYLE",
+    name: "style",
     description: "layout or style change",
   },
   fix: {
     emoji: "🐛",
-    name: "FIX",
+    name: "fix",
     description: "fix bug",
   },
   chore: {
     emoji: "🧹",
-    name: "CHORE",
+    name: "chore",
     description: "update packages, gitignore etc; (no prod code)",
   },
   doc: {
     emoji: "📖",
-    name: "DOC",
+    name: "doc",
     description: "documentation",
   },
   refactor: {
     emoji: "🛠 ", // needs extra space
-    name: "REFACTOR",
+    name: "refactor",
     description: "refactoring",
   },
   content: {
     emoji: "📝",
-    name: "CONTENT",
+    name: "content",
     description: "content changes",
   },
   test: {
     emoji: "✅",
-    name: "TEST",
+    name: "test",
     description: "add/edit tests (no prod code)",
   },
   try: {
     emoji: "🤞",
-    name: "TRY",
+    name: "try",
     description: "add untested to production",
   },
   build: {
     emoji: "🚀",
-    name: "BUILD",
+    name: "build",
     description: "build for production",
   },
 };
@@ -89,7 +89,7 @@ const questions = [
     name: "commitType",
     message: "Select a commit type:",
     choices: Object.values(commitTypes).map(
-      (type) => `${type.emoji} ${type.name}: ${type.description}`
+      (type) => `${type.name} ${type.emoji}: ${type.description}`
     ),
     // when: function (answers) {
     //   return answers.comments !== "Nope, all good!";
